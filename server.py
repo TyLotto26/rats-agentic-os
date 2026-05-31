@@ -139,27 +139,36 @@ def api_openrouter():
                         break
 
         if not or_key:
-            return jsonify({"error": "No API key found", "credits": 0, "total_usage": 0, "remaining": 0})
+            return jsonify({"error": "No API key found", "ok": False, "total_credits": 0, "total_usage": 0, "remaining": 0})
 
         result = subprocess.run(
             ["curl", "-s", "-H", f"Authorization: Bearer {or_key}",
              "https://openrouter.ai/api/v1/credits"],
             capture_output=True, text=True, timeout=5
         )
+        if result.returncode != 0 or not result.stdout.strip():
+            return jsonify({"error": "OpenRouter API unreachable", "ok": False, "total_credits": 0, "total_usage": 0, "remaining": 0})
+
         data = json.loads(result.stdout)
+        if "error" in data:
+            return jsonify({"error": data["error"].get("message", "API error"), "ok": False, "total_credits": 0, "total_usage": 0, "remaining": 0})
+
         total = data.get("data", {}).get("total_credits", 0)
         used = data.get("data", {}).get("total_usage", 0)
         remaining = round(total - used, 2)
 
         return jsonify({
+            "ok": True,
             "total_credits": total,
             "total_usage": round(used, 2),
             "remaining": remaining,
             "pct_used": round((used / max(total, 1)) * 100, 1),
             "timestamp": now_iso()
         })
+    except json.JSONDecodeError:
+        return jsonify({"error": "Invalid response from OpenRouter", "ok": False, "total_credits": 0, "total_usage": 0, "remaining": 0})
     except Exception as e:
-        return jsonify({"error": str(e), "credits": 0, "total_usage": 0, "remaining": 0})
+        return jsonify({"error": str(e), "ok": False, "total_credits": 0, "total_usage": 0, "remaining": 0})
 
 
 # ── API: Token Costs (live from OpenRouter) ──
@@ -191,7 +200,7 @@ def api_costs():
 
         return jsonify({
             "total_credits": total,
-            "total_today": round(used * 0.01, 2),  # approximate daily
+            "total_today": round(used * 0.01, 2),  # estimated daily
             "total_week": round(used * 0.05, 2),
             "total_month": round(used, 2),
             "remaining": remaining,
@@ -480,7 +489,7 @@ def api_insights():
             recs.append({"type": "optimization", "title": f"Bankroll: ${bankroll} — pipeline in {state.get('mode', 'paper')} mode", "impact": "low", "action": "Paper mode active. Baton Protocol ensures clean handoffs between agents."})
         last_cycle = state.get("last_cycle_complete", "")
         if last_cycle:
-            recs.append({"type": "memory", "title": f"Last pipeline cycle: {last_cycle[:19]}", "impact": "low", "action": "Cycle 267 reached. Self-improvement loop running nominally."})
+            recs.append({"type": "memory", "title": f"Last pipeline cycle: {last_cycle[:19]}", "impact": "low", "action": f"Cycle {cycle} reached. Self-improvement loop running nominally."})
 
     return jsonify({
         "recommendations": recs,

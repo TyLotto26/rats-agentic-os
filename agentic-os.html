@@ -1064,6 +1064,49 @@ body::before {
   0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(0, 230, 118, 0.4); }
   50% { opacity: 0.6; transform: scale(0.9); box-shadow: 0 0 0 6px transparent; }
 }
+
+/* ═══════════ RESPONSIVE DESIGN ═══════════ */
+@media (max-width: 768px) {
+  .app { flex-direction: column; }
+  .sidebar {
+    width: 100%; min-width: unset; height: auto;
+    border-right: none; border-bottom: 1px solid var(--accent-edge);
+    padding: 8px 0; flex-direction: row; flex-wrap: wrap; gap: 0;
+  }
+  .sidebar-brand { padding: 0 12px 4px; width: 100; }
+  .sidebar .nav-section { display: none; }
+  .nav-item { padding: 6px 10px; font-size: 10px; }
+  .content { padding: 12px; }
+  .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; gap: 12px; }
+  .header { padding: 0 12px; gap: 6px; flex-wrap: wrap; }
+  .header-stats { gap: 8px; }
+  .header-stat .label { font-size: 8px; }
+  .header-stat .value { font-size: 14px; }
+  .tabs { padding-left: 8px; gap: 4px; }
+  .tab-item { padding: 0 8px; font-size: 10px; }
+  .knowledge-graph { padding: 12px; min-height: 220px; }
+  .kv-graph-container { height: 240px; }
+  .metric-hero { grid-template-columns: 1fr; gap: 12px; }
+  .sub-grid { grid-template-columns: 1fr; gap: 12px; }
+  .live-usage { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .graph-legend { gap: 6px; font-size: 8px; }
+  .double-bezel .inner { padding: 14px; }
+  .card { padding: 12px; }
+}
+
+@media (max-width: 480px) {
+  .content { padding: 8px; }
+  .panel-title { font-size: 14px; margin-bottom: 12px; }
+  .header { flex-direction: column; align-items: flex-start; padding: 8px; }
+  .header-goal { padding: 0; width: 100; }
+  .header-agent { margin-bottom: 4px; }
+  .live-usage { grid-template-columns: 1fr; }
+}
+
+/* Consistent grid spacing */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+.grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
 </style>
 </head>
 <body>
@@ -2081,8 +2124,8 @@ document.querySelectorAll('.tab-item').forEach(tab => {
       openclaw: { name: '🐁 OpenClaw', model: 'Jane / Multi-model' },
     };
     if (maps[tabName]) {
-      nameEl.textContent = maps[tabName].name;
-      modelEl.textContent = maps[tabName].model;
+      if (nameEl) nameEl.textContent = maps[tabName].name;
+      if (modelEl) modelEl.textContent = maps[tabName].model;
     }
 
     // Hide all sidebar panels, show agent view
@@ -2114,6 +2157,13 @@ async function fetchJSON(url) {
   } catch {
     return null;
   }
+}
+
+function escapeHtml(str) {
+  if (!str) return '';
+  const d = document.createElement('div');
+  d.textContent = str;
+  return d.innerHTML;
 }
 
 function formatTime(iso) {
@@ -2212,7 +2262,7 @@ async function loadAll() {
   }
 
   // Task count
-  const taskCount = data.agents?.agents ? Object.keys(data.agents.agents).length : 0;
+  const taskCount = data.agents?.agents ? Object.values(data.agents.agents).reduce((sum, a) => sum + (a.tasks_today || 0), 0) : 0;
   document.getElementById('totalTasks').textContent = taskCount;
 
   // OpenRouter balance
@@ -2239,7 +2289,7 @@ async function loadAll() {
     if (container) {
       container.innerHTML = data.insights.map(r => {
         const impactClass = r.impact === 'high' ? 'danger' : r.impact === 'medium' ? 'warn' : '';
-        return `<div class="insight-card ${impactClass}"><div class="insight-title">${r.title}</div><div class="insight-action">${r.action}</div><div class="insight-impact impact-${r.impact}">${r.impact} impact</div></div>`;
+        return `<div class="insight-card ${impactClass}"><div class="insight-title">${escapeHtml(r.title)}</div><div class="insight-action">${escapeHtml(r.action)}</div><div class="insight-impact impact-${r.impact}">${escapeHtml(r.impact)} impact</div></div>`;
       }).join('');
     }
   } else {
@@ -2273,8 +2323,14 @@ async function loadAll() {
   // OpenRouter in header
   if (data.openrouter) {
     const balance = document.getElementById('openrouterCost');
-    if (balance && data.openrouter.remaining !== undefined) {
-      balance.textContent = '$' + data.openrouter.remaining.toFixed(2) + ' left';
+    if (balance) {
+      if (data.openrouter.ok && data.openrouter.remaining !== undefined) {
+        balance.textContent = '$' + data.openrouter.remaining.toFixed(2) + ' left';
+      } else if (data.openrouter.error) {
+        balance.textContent = '⚠ ' + data.openrouter.error;
+      } else {
+        balance.textContent = '— check API';
+      }
     }
     const bar = document.getElementById('openrouterBar');
     if (bar && data.openrouter.pct_used !== undefined) {
@@ -2347,7 +2403,7 @@ async function loadOpenclawView() {
     try {
       const res = await fetch('/api/pipeline');
       const pipe = await res.json();
-      if (pipe.cycle !== undefined) {
+      if (Array.isArray(pipe.stages)) {
         cronLog.innerHTML = pipe.stages.map(s =>
           '<div style="padding:2px 0;"><span style="color:' + (s.status === 'running' ? 'var(--accent)' : 'var(--text-faint)') + ';">●</span> ' +
           s.name + ' — ' + (s.last_run ? new Date(s.last_run).toLocaleTimeString() : '—') +
@@ -2597,7 +2653,7 @@ async function loadKnowledgeGraph() {
         const label = categoryLabels[note.category] || note.category.substring(0, 3).toUpperCase();
         return `<span style="display:inline-flex;align-items:center;gap:3px;padding:2px 8px;background:rgba(0,230,118,0.06);border:1px solid rgba(0,230,118,0.12);border-radius:12px;font-size:9px;cursor:default;">
           <span style="color:var(--accent);font-weight:600;">${label}</span>
-          <span style="color:var(--text-secondary);">${note.name}</span>
+          <span style="color:var(--text-secondary);">${safeName}</span>
         </span>`;
       }).join('');
     }
