@@ -109,7 +109,7 @@ def api_pipeline():
             "name": stage_key.capitalize(),
             "status": s.get("status", "inactive"),
             "last_run": s.get("last_run"),
-            "targets": s.get("targets_count") or s.get("proposal_count") or s.get("executed", 0),
+            "targets": s.get("targets_count") if s.get("targets_count") is not None else (s.get("proposal_count") if s.get("proposal_count") is not None else s.get("executed", 0)),
         })
 
     return jsonify({
@@ -222,7 +222,6 @@ def api_costs():
 @app.route("/api/goals")
 def api_goals():
     """Phased roadmap with progress, costs, and mission state."""
-    from datetime import date
 
     phases = [
         {
@@ -468,9 +467,10 @@ def api_insights():
                         or_key = line.strip().split("=", 1)[1]
         if or_key:
             r = subprocess.run(
-                ["curl", "-s", "-H", f"Authorization: Bearer {or_key}",
-                 "https://openrouter.ai/api/v1/credits"],
-            )
+                            ["curl", "-s", "-H", f"Authorization: Bearer ***"
+                             "https://openrouter.ai/api/v1/credits"],
+                            capture_output=True, text=True, timeout=5,
+                        )
             data = json.loads(r.stdout).get("data", {})
             total = data.get("total_credits", 0)
             used = data.get("total_usage", 0)

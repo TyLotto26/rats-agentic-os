@@ -24,10 +24,10 @@
   --bg-panel: #0F1310;
   --bg-card: #141A15;
   --bg-elevated: #1A1F1B;
-  --text-primary: rgba(0, 230, 118, 0.85);
-  --text-secondary: rgba(0, 230, 118, 0.50);
-  --text-faint: rgba(0, 230, 118, 0.20);
-  --text-white: #E8F0E8;
+  --text-primary: rgba(0, 230, 118, 0.90);
+  --text-secondary: rgba(0, 230, 118, 0.65);
+  --text-faint: rgba(0, 230, 118, 0.35);
+  --text-white: #F0F8F0;
   --font-mono: 'Geist Mono', monospace;
   --font-display: 'Geist', sans-serif;
   --sidebar-w: 200px;
@@ -2348,6 +2348,8 @@ async function loadPiView(data) {
   const chatLog = document.getElementById('piChatLog');
   if (chatLog && data.pi && data.pi.output && data.pi.output.length) {
     chatLog.textContent = data.pi.output.slice(-15).join('\n');
+  } else if (chatLog) {
+    chatLog.textContent = 'No recent Pi output — session may be idle';
   }
   const status = document.getElementById('piViewStatus');
   if (status && data.pi) {
@@ -2384,9 +2386,10 @@ async function loadCodexView() {
     try {
       // Show pipeline status and cycle info for Codex context
       const res = await fetch('/api/pipeline');
+      if (!res.ok) throw new Error(res.status);
       const pipe = await res.json();
       gitEl.innerHTML =
-        '<div class="stat-line"><span class="label">Pipeline Cycle</span><span class="val accent">#' + (pipe.cycle || 0) + '</span></div>' +
+        '<div class="stat-line"><span class="label">Pipeline Context</span><span class="val accent">#' + (pipe.cycle || 0) + '</span></div>' +
         '<div class="stat-line"><span class="label">Mode</span><span class="val">' + (pipe.mode || 'paper') + '</span></div>' +
         '<div class="stat-line"><span class="label">Bankroll</span><span class="val">$' + (pipe.bankroll || 0) + '</span></div>' +
         '<div class="stat-line"><span class="label">Last Cycle</span><span class="val">' + (pipe.last_cycle ? new Date(pipe.last_cycle).toLocaleTimeString() : '—') + '</span></div>' +
@@ -2402,6 +2405,7 @@ async function loadOpenclawView() {
   if (cronLog) {
     try {
       const res = await fetch('/api/pipeline');
+      if (!res.ok) throw new Error(res.status);
       const pipe = await res.json();
       if (Array.isArray(pipe.stages)) {
         cronLog.innerHTML = pipe.stages.map(s =>
@@ -2618,10 +2622,10 @@ async function loadKnowledgeGraph() {
       // Text label
       const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       text.setAttribute('x', pos.x);
-      text.setAttribute('y', pos.y + note.size + 12);
+      text.setAttribute('y', pos.y + note.size + 16);
       text.setAttribute('text-anchor', 'middle');
       text.setAttribute('fill', 'var(--text-secondary)');
-      text.setAttribute('font-size', '7px');
+      text.setAttribute('font-size', '8px');
       text.setAttribute('font-family', 'var(--font-display)');
       text.textContent = note.name;
 
