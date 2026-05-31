@@ -9,7 +9,7 @@ import json
 import os
 import sys
 import subprocess
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 try:
@@ -77,7 +77,7 @@ def api_agents():
             s = state.get(stage, {})
             if s.get("status") == "running":
                 agents["pi"]["status"] = "running"
-        agents["openclaw"]["tasks_today"] = 5  # 5 crons
+        agents["openclaw"]["tasks_today"] = openclaw_tasks_today(state)
 
     return jsonify({"agents": agents, "timestamp": now_iso()})
 
@@ -113,7 +113,7 @@ def api_pipeline():
         })
 
     return jsonify({
-        "status": "online" if state.get("last_cycle_complete") else "idle",
+        "status": "online" if is_recent(state.get("last_cycle_complete"), hours=1) else "idle",
         "stages": stages,
         "cycle": state.get("cycle", 0),
         "bankroll": state.get("bankroll", 0),
@@ -735,7 +735,8 @@ def api_unified():
                             "running": data.get("running", False),
                             "output": data.get("output", []),
                             "status": data.get("status", "unknown"),
-                            "model": data.get("model", "deepseek/deepseek-chat")
+                            "model": data.get("model", "deepseek/deepseek-chat"),
+                            "window_count": data.get("window_count", "1")
                         }
                     else:
                         result[key] = data
@@ -752,6 +753,59 @@ def read_json(path):
             return json.load(f)
     except:
         return None
+
+def parse_iso_datetime(value):
+    if not value:
+        return None
+    try:
+        if isinstance(value, str) and value.endswith("Z"):
+            value = value[:-1] + "+00:00"
+        dt = datetime.fromisoformat(value)
+        if dt.tzinfo is None:
+            dt = dt.replace(tzinfo=timezone.utc)
+        return dt.astimezone(timezone.utc)
+    except (TypeError, ValueError):
+        return None
+
+def is_recent(value, hours=1):
+    dt = parse_iso_datetime(value)
+    if not dt:
+        return False
+    now = datetime.now(timezone.utc)
+    return timedelta(0) <= now - dt <= timedelta(hours=hours)
+
+def openclaw_tasks_today(state):
+    explicit = state.get("tasks_today")
+    if isinstance(explicit, (int, float)):
+        return int(explicit)
+
+    openclaw = state.get("openclaw", {})
+    if isinstance(openclaw, dict) and isinstance(openclaw.get("tasks_today"), (int, float)):
+        return int(openclaw["tasks_today"])
+
+    today = datetime.now(timezone.utc).date()
+    count = 0
+    cron_status = state.get("cron_status", {})
+    if isinstance(cron_status, dict):
+        if isinstance(cron_status.get("tasks_today"), (int, float)):
+            return int(cron_status["tasks_today"])
+        for cron in cron_status.values():
+            if isinstance(cron, dict):
+                last_run = parse_iso_datetime(cron.get("last_run"))
+                status = cron.get("status")
+                if status in {"running", "active"} or (last_run and last_run.date() == today):
+                    count += 1
+        if count:
+            return count
+
+    for stage_key in ["polyscan", "whalewatch", "polybrain", "polyexec"]:
+        stage = state.get(stage_key, {})
+        if not isinstance(stage, dict):
+            continue
+        last_run = parse_iso_datetime(stage.get("last_run"))
+        if stage.get("status") in {"running", "complete"} and last_run and last_run.date() == today:
+            count += 1
+    return count
 
 def now_iso():
     return datetime.now(timezone.utc).isoformat()
