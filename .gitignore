@@ -20,5 +20,7 @@ Thumbs.db
 # power-design subdirectory (large)
 power-design/
 
-# cursor report was single-run artifact
+# cursor agent reports (work applied, clean up residuals)
 cusor-bug-report.md
+design-polish-report.md
+phase2-4-bug-report.md
