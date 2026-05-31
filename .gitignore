@@ -1,0 +1,24 @@
+# runtime
+__pycache__/
+*.pyc
+*.pyo
+*.log
+dispatch-log.jsonl
+
+# screenshots
+*.png
+*.jpg
+
+# temp
+*.tmp
+*.bak
+
+# os artifacts
+.DS_Store
+Thumbs.db
+
+# power-design subdirectory (large)
+power-design/
+
+# cursor report was single-run artifact
+cusor-bug-report.md
