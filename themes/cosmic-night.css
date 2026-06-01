@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   COSMIC NIGHT — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="cosmic-night"] {
+  /* ── Primary Accent ── */
+  --accent: #a48fff;
+  --accent-strong: rgba(164, 143, 255, 0.85);
+  --accent-mid: rgba(164, 143, 255, 0.5);
+  --accent-dim: rgba(164, 143, 255, 0.2);
+  --accent-faint: rgba(164, 143, 255, 0.06);
+  --accent-edge: rgba(164, 143, 255, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ff5470;
+  --yellow: #64b5f6;
+  --purple: #4db6ac;
+  --blue: #a48fff;
+  --orange: #ff79c6;
+  --green: #7986cb;
+
+  /* ── Backgrounds ── */
+  --bg: #0f0f1a;
+  --bg-panel: #1a1a2e;
+  --bg-card: #1a1a2f;
+  --bg-elevated: #1b1b30;
+
+  /* ── Text ── */
+  --text-primary: rgba(226, 226, 245, 0.9);
+  --text-secondary: rgba(226, 226, 245, 0.6);
+  --text-faint: rgba(226, 226, 245, 0.25);
+  --text-white: #e2e2f5;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(164, 143, 255, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #1a1a2e;
+  --lane-in-progress: rgba(164, 143, 255, 0.08);
+  --lane-completed: rgba(121, 134, 203, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

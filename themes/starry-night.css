@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   STARRY NIGHT — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="starry-night"] {
+  /* ── Primary Accent ── */
+  --accent: #3a5ba0;
+  --accent-strong: rgba(58, 91, 160, 0.85);
+  --accent-mid: rgba(58, 91, 160, 0.5);
+  --accent-dim: rgba(58, 91, 160, 0.2);
+  --accent-faint: rgba(58, 91, 160, 0.06);
+  --accent-edge: rgba(58, 91, 160, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #a04a6c;
+  --yellow: #6ea3c1;
+  --purple: #7a88a1;
+  --blue: #3a5ba0;
+  --orange: #a04a6c;
+  --green: #ffe066;
+
+  /* ── Backgrounds ── */
+  --bg: #181a24;
+  --bg-panel: #23243a;
+  --bg-card: #24253b;
+  --bg-elevated: #25263d;
+
+  /* ── Text ── */
+  --text-primary: rgba(230, 234, 243, 0.9);
+  --text-secondary: rgba(230, 234, 243, 0.6);
+  --text-faint: rgba(230, 234, 243, 0.25);
+  --text-white: #e6eaf3;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(58, 91, 160, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #23243a;
+  --lane-in-progress: rgba(58, 91, 160, 0.08);
+  --lane-completed: rgba(255, 224, 102, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

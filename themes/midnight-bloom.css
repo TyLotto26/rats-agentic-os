@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   MIDNIGHT BLOOM — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="midnight-bloom"] {
+  /* ── Primary Accent ── */
+  --accent: #6c5ce7;
+  --accent-strong: rgba(108, 92, 231, 0.85);
+  --accent-mid: rgba(108, 92, 231, 0.5);
+  --accent-dim: rgba(108, 92, 231, 0.2);
+  --accent-faint: rgba(108, 92, 231, 0.06);
+  --accent-edge: rgba(108, 92, 231, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ef4444;
+  --yellow: #4b0082;
+  --purple: #6495ed;
+  --blue: #6c5ce7;
+  --orange: #4682b4;
+  --green: #8e44ad;
+
+  /* ── Backgrounds ── */
+  --bg: #1a1d23;
+  --bg-panel: #2f3436;
+  --bg-card: #303537;
+  --bg-elevated: #313739;
+
+  /* ── Text ── */
+  --text-primary: rgba(229, 229, 229, 0.9);
+  --text-secondary: rgba(229, 229, 229, 0.6);
+  --text-faint: rgba(229, 229, 229, 0.25);
+  --text-white: #e5e5e5;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(108, 92, 231, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #2f3436;
+  --lane-in-progress: rgba(108, 92, 231, 0.08);
+  --lane-completed: rgba(142, 68, 173, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

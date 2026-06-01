@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   CLAUDE — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="claude"] {
+  /* ── Primary Accent ── */
+  --accent: #d97757;
+  --accent-strong: rgba(217, 119, 87, 0.85);
+  --accent-mid: rgba(217, 119, 87, 0.5);
+  --accent-dim: rgba(217, 119, 87, 0.2);
+  --accent-faint: rgba(217, 119, 87, 0.06);
+  --accent-edge: rgba(217, 119, 87, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ef4444;
+  --yellow: #1a1915;
+  --purple: #2f2b48;
+  --blue: #b05730;
+  --orange: #b4552d;
+  --green: #9c87f5;
+
+  /* ── Backgrounds ── */
+  --bg: #262624;
+  --bg-panel: #262624;
+  --bg-card: #272725;
+  --bg-elevated: #282826;
+
+  /* ── Text ── */
+  --text-primary: rgba(195, 192, 182, 0.9);
+  --text-secondary: rgba(195, 192, 182, 0.6);
+  --text-faint: rgba(195, 192, 182, 0.25);
+  --text-white: #c3c0b6;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(217, 119, 87, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #262624;
+  --lane-in-progress: rgba(217, 119, 87, 0.08);
+  --lane-completed: rgba(156, 135, 245, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

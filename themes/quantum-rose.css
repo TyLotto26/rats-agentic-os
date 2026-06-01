@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   QUANTUM ROSE — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="quantum-rose"] {
+  /* ── Primary Accent ── */
+  --accent: #ff6bef;
+  --accent-strong: rgba(255, 107, 239, 0.85);
+  --accent-mid: rgba(255, 107, 239, 0.5);
+  --accent-dim: rgba(255, 107, 239, 0.2);
+  --accent-faint: rgba(255, 107, 239, 0.06);
+  --accent-edge: rgba(255, 107, 239, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ff2876;
+  --yellow: #9161ff;
+  --purple: #6f73e2;
+  --blue: #ff6bef;
+  --orange: #547aff;
+  --green: #c359e3;
+
+  /* ── Backgrounds ── */
+  --bg: #1a0922;
+  --bg-panel: #2a1435;
+  --bg-card: #2b1436;
+  --bg-elevated: #2c1538;
+
+  /* ── Text ── */
+  --text-primary: rgba(255, 179, 255, 0.9);
+  --text-secondary: rgba(255, 179, 255, 0.6);
+  --text-faint: rgba(255, 179, 255, 0.25);
+  --text-white: #ffb3ff;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(255, 107, 239, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #2a1435;
+  --lane-in-progress: rgba(255, 107, 239, 0.08);
+  --lane-completed: rgba(195, 89, 227, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

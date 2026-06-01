@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   VIOLET BLOOM — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="violet-bloom"] {
+  /* ── Primary Accent ── */
+  --accent: #8c5cff;
+  --accent-strong: rgba(140, 92, 255, 0.85);
+  --accent-mid: rgba(140, 92, 255, 0.5);
+  --accent-dim: rgba(140, 92, 255, 0.2);
+  --accent-faint: rgba(140, 92, 255, 0.06);
+  --accent-edge: rgba(140, 92, 255, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #f87171;
+  --yellow: #fca5a5;
+  --purple: #5993f4;
+  --blue: #4ade80;
+  --orange: #a0a0a0;
+  --green: #8c5cff;
+
+  /* ── Backgrounds ── */
+  --bg: #1a1b1e;
+  --bg-panel: #222327;
+  --bg-card: #232428;
+  --bg-elevated: #242529;
+
+  /* ── Text ── */
+  --text-primary: rgba(240, 240, 240, 0.9);
+  --text-secondary: rgba(240, 240, 240, 0.6);
+  --text-faint: rgba(240, 240, 240, 0.25);
+  --text-white: #f0f0f0;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(140, 92, 255, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #222327;
+  --lane-in-progress: rgba(140, 92, 255, 0.08);
+  --lane-completed: rgba(140, 92, 255, 0.08);
+
+  /* ── Radius ── */
+  --radius: 1.4rem;
+}

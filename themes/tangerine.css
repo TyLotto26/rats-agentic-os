@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   TANGERINE — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="tangerine"] {
+  /* ── Primary Accent ── */
+  --accent: #e05d38;
+  --accent-strong: rgba(224, 93, 56, 0.85);
+  --accent-mid: rgba(224, 93, 56, 0.5);
+  --accent-dim: rgba(224, 93, 56, 0.2);
+  --accent-faint: rgba(224, 93, 56, 0.06);
+  --accent-edge: rgba(224, 93, 56, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ef4444;
+  --yellow: #5a7ca6;
+  --purple: #466494;
+  --blue: #86a7c8;
+  --orange: #334c82;
+  --green: #e6a08f;
+
+  /* ── Backgrounds ── */
+  --bg: #1c2433;
+  --bg-panel: #2a3040;
+  --bg-card: #2b3141;
+  --bg-elevated: #2c3243;
+
+  /* ── Text ── */
+  --text-primary: rgba(229, 229, 229, 0.9);
+  --text-secondary: rgba(229, 229, 229, 0.6);
+  --text-faint: rgba(229, 229, 229, 0.25);
+  --text-white: #e5e5e5;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(224, 93, 56, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #2a3040;
+  --lane-in-progress: rgba(224, 93, 56, 0.08);
+  --lane-completed: rgba(230, 160, 143, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

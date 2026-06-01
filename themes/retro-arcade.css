@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   RETRO ARCADE — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="retro-arcade"] {
+  /* ── Primary Accent ── */
+  --accent: #d33682;
+  --accent-strong: rgba(211, 54, 130, 0.85);
+  --accent-mid: rgba(211, 54, 130, 0.5);
+  --accent-dim: rgba(211, 54, 130, 0.2);
+  --accent-faint: rgba(211, 54, 130, 0.06);
+  --accent-edge: rgba(211, 54, 130, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #dc322f;
+  --yellow: #d33682;
+  --purple: #cb4b16;
+  --blue: #268bd2;
+  --orange: #dc322f;
+  --green: #2aa198;
+
+  /* ── Backgrounds ── */
+  --bg: #002b36;
+  --bg-panel: #073642;
+  --bg-card: #073743;
+  --bg-elevated: #073945;
+
+  /* ── Text ── */
+  --text-primary: rgba(147, 161, 161, 0.9);
+  --text-secondary: rgba(147, 161, 161, 0.6);
+  --text-faint: rgba(147, 161, 161, 0.25);
+  --text-white: #93a1a1;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(211, 54, 130, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #073642;
+  --lane-in-progress: rgba(211, 54, 130, 0.08);
+  --lane-completed: rgba(42, 161, 152, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.25rem;
+}

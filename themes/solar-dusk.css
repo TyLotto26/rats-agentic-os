@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   SOLAR DUSK — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="solar-dusk"] {
+  /* ── Primary Accent ── */
+  --accent: #F97316;
+  --accent-strong: rgba(249, 115, 22, 0.85);
+  --accent-mid: rgba(249, 115, 22, 0.5);
+  --accent-dim: rgba(249, 115, 22, 0.2);
+  --accent-faint: rgba(249, 115, 22, 0.06);
+  --accent-edge: rgba(249, 115, 22, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #DC2626;
+  --yellow: #EAB308;
+  --purple: #A8A29E;
+  --blue: #F97316;
+  --orange: #78716C;
+  --green: #0EA5E9;
+
+  /* ── Backgrounds ── */
+  --bg: #1C1917;
+  --bg-panel: #292524;
+  --bg-card: #2a2625;
+  --bg-elevated: #2b2726;
+
+  /* ── Text ── */
+  --text-primary: rgba(245, 245, 244, 0.9);
+  --text-secondary: rgba(245, 245, 244, 0.6);
+  --text-faint: rgba(245, 245, 244, 0.25);
+  --text-white: #F5F5F4;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(249, 115, 22, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #292524;
+  --lane-in-progress: rgba(249, 115, 22, 0.08);
+  --lane-completed: rgba(14, 165, 233, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.3rem;
+}

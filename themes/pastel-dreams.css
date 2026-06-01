@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   PASTEL DREAMS — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="pastel-dreams"] {
+  /* ── Primary Accent ── */
+  --accent: #c0aafd;
+  --accent-strong: rgba(192, 170, 253, 0.85);
+  --accent-mid: rgba(192, 170, 253, 0.5);
+  --accent-dim: rgba(192, 170, 253, 0.2);
+  --accent-faint: rgba(192, 170, 253, 0.06);
+  --accent-edge: rgba(192, 170, 253, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #fca5a5;
+  --yellow: #8b5cf6;
+  --purple: #7c3aed;
+  --blue: #c0aafd;
+  --orange: #6d28d9;
+  --green: #a78bfa;
+
+  /* ── Backgrounds ── */
+  --bg: #1c1917;
+  --bg-panel: #2d2535;
+  --bg-card: #2e2636;
+  --bg-elevated: #2f2738;
+
+  /* ── Text ── */
+  --text-primary: rgba(224, 231, 255, 0.9);
+  --text-secondary: rgba(224, 231, 255, 0.6);
+  --text-faint: rgba(224, 231, 255, 0.25);
+  --text-white: #e0e7ff;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(192, 170, 253, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #2d2535;
+  --lane-in-progress: rgba(192, 170, 253, 0.08);
+  --lane-completed: rgba(167, 139, 250, 0.08);
+
+  /* ── Radius ── */
+  --radius: 1.5rem;
+}

@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   BOLD TECH — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="bold-tech"] {
+  /* ── Primary Accent ── */
+  --accent: #8b5cf6;
+  --accent-strong: rgba(139, 92, 246, 0.85);
+  --accent-mid: rgba(139, 92, 246, 0.5);
+  --accent-dim: rgba(139, 92, 246, 0.2);
+  --accent-faint: rgba(139, 92, 246, 0.06);
+  --accent-edge: rgba(139, 92, 246, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ef4444;
+  --yellow: #7c3aed;
+  --purple: #6d28d9;
+  --blue: #a78bfa;
+  --orange: #5b21b6;
+  --green: #8b5cf6;
+
+  /* ── Backgrounds ── */
+  --bg: #0f172a;
+  --bg-panel: #1e1b4b;
+  --bg-card: #1e1b4d;
+  --bg-elevated: #1f1c4f;
+
+  /* ── Text ── */
+  --text-primary: rgba(224, 231, 255, 0.9);
+  --text-secondary: rgba(224, 231, 255, 0.6);
+  --text-faint: rgba(224, 231, 255, 0.25);
+  --text-white: #e0e7ff;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(139, 92, 246, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #1e1b4b;
+  --lane-in-progress: rgba(139, 92, 246, 0.08);
+  --lane-completed: rgba(139, 92, 246, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.625rem;
+}

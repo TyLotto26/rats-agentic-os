@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   MODERN MINIMAL — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="modern-minimal"] {
+  /* ── Primary Accent ── */
+  --accent: #3b82f6;
+  --accent-strong: rgba(59, 130, 246, 0.85);
+  --accent-mid: rgba(59, 130, 246, 0.5);
+  --accent-dim: rgba(59, 130, 246, 0.2);
+  --accent-faint: rgba(59, 130, 246, 0.06);
+  --accent-edge: rgba(59, 130, 246, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ef4444;
+  --yellow: #2563eb;
+  --purple: #1d4ed8;
+  --blue: #60a5fa;
+  --orange: #1e40af;
+  --green: #3b82f6;
+
+  /* ── Backgrounds ── */
+  --bg: #171717;
+  --bg-panel: #262626;
+  --bg-card: #272727;
+  --bg-elevated: #282828;
+
+  /* ── Text ── */
+  --text-primary: rgba(229, 229, 229, 0.9);
+  --text-secondary: rgba(229, 229, 229, 0.6);
+  --text-faint: rgba(229, 229, 229, 0.25);
+  --text-white: #e5e5e5;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(59, 130, 246, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #262626;
+  --lane-in-progress: rgba(59, 130, 246, 0.08);
+  --lane-completed: rgba(59, 130, 246, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.375rem;
+}

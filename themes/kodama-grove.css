@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   KODAMA GROVE — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="kodama-grove"] {
+  /* ── Primary Accent ── */
+  --accent: #8a9f7b;
+  --accent-strong: rgba(138, 159, 123, 0.85);
+  --accent-mid: rgba(138, 159, 123, 0.5);
+  --accent-dim: rgba(138, 159, 123, 0.2);
+  --accent-faint: rgba(138, 159, 123, 0.06);
+  --accent-edge: rgba(138, 159, 123, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #b5766a;
+  --yellow: #71856a;
+  --purple: #a18f5c;
+  --blue: #8a9f7b;
+  --orange: #5e6e58;
+  --green: #9db18c;
+
+  /* ── Backgrounds ── */
+  --bg: #3a3529;
+  --bg-panel: #413c33;
+  --bg-card: #423d34;
+  --bg-elevated: #443f36;
+
+  /* ── Text ── */
+  --text-primary: rgba(237, 228, 212, 0.9);
+  --text-secondary: rgba(237, 228, 212, 0.6);
+  --text-faint: rgba(237, 228, 212, 0.25);
+  --text-white: #ede4d4;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(138, 159, 123, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #413c33;
+  --lane-in-progress: rgba(138, 159, 123, 0.08);
+  --lane-completed: rgba(157, 177, 140, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

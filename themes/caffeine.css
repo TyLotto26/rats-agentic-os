@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   CAFFEINE — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="caffeine"] {
+  /* ── Primary Accent ── */
+  --accent: #ffe0c2;
+  --accent-strong: rgba(255, 224, 194, 0.85);
+  --accent-mid: rgba(255, 224, 194, 0.5);
+  --accent-dim: rgba(255, 224, 194, 0.2);
+  --accent-faint: rgba(255, 224, 194, 0.06);
+  --accent-edge: rgba(255, 224, 194, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #e54d2e;
+  --yellow: #2a2a2a;
+  --purple: #42382e;
+  --blue: #ffe0c2;
+  --orange: #ffe0c1;
+  --green: #393028;
+
+  /* ── Backgrounds ── */
+  --bg: #111111;
+  --bg-panel: #191919;
+  --bg-card: #191919;
+  --bg-elevated: #1a1a1a;
+
+  /* ── Text ── */
+  --text-primary: rgba(238, 238, 238, 0.9);
+  --text-secondary: rgba(238, 238, 238, 0.6);
+  --text-faint: rgba(238, 238, 238, 0.25);
+  --text-white: #eeeeee;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(255, 224, 194, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #191919;
+  --lane-in-progress: rgba(255, 224, 194, 0.08);
+  --lane-completed: rgba(57, 48, 40, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

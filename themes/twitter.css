@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   TWITTER — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="twitter"] {
+  /* ── Primary Accent ── */
+  --accent: #1c9cf0;
+  --accent-strong: rgba(28, 156, 240, 0.85);
+  --accent-mid: rgba(28, 156, 240, 0.5);
+  --accent-dim: rgba(28, 156, 240, 0.2);
+  --accent-faint: rgba(28, 156, 240, 0.06);
+  --accent-edge: rgba(28, 156, 240, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #f4212e;
+  --yellow: #f7b928;
+  --purple: #17bf63;
+  --blue: #1e9df1;
+  --orange: #e0245e;
+  --green: #00b87a;
+
+  /* ── Backgrounds ── */
+  --bg: #000000;
+  --bg-panel: #17181c;
+  --bg-card: #17181c;
+  --bg-elevated: #18191d;
+
+  /* ── Text ── */
+  --text-primary: rgba(231, 233, 234, 0.9);
+  --text-secondary: rgba(231, 233, 234, 0.6);
+  --text-faint: rgba(231, 233, 234, 0.25);
+  --text-white: #e7e9ea;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(28, 156, 240, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #17181c;
+  --lane-in-progress: rgba(28, 156, 240, 0.08);
+  --lane-completed: rgba(0, 184, 122, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

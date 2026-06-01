@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   OCEAN BREEZE — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="ocean-breeze"] {
+  /* ── Primary Accent ── */
+  --accent: #34d399;
+  --accent-strong: rgba(52, 211, 153, 0.85);
+  --accent-mid: rgba(52, 211, 153, 0.5);
+  --accent-dim: rgba(52, 211, 153, 0.2);
+  --accent-faint: rgba(52, 211, 153, 0.06);
+  --accent-edge: rgba(52, 211, 153, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ef4444;
+  --yellow: #22c55e;
+  --purple: #10b981;
+  --blue: #34d399;
+  --orange: #059669;
+  --green: #2dd4bf;
+
+  /* ── Backgrounds ── */
+  --bg: #0f172a;
+  --bg-panel: #1e293b;
+  --bg-card: #1e2a3c;
+  --bg-elevated: #1f2b3e;
+
+  /* ── Text ── */
+  --text-primary: rgba(209, 213, 219, 0.9);
+  --text-secondary: rgba(209, 213, 219, 0.6);
+  --text-faint: rgba(209, 213, 219, 0.25);
+  --text-white: #d1d5db;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(52, 211, 153, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #1e293b;
+  --lane-in-progress: rgba(52, 211, 153, 0.08);
+  --lane-completed: rgba(45, 212, 191, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

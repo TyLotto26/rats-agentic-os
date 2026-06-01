@@ -1149,6 +1149,28 @@ body::before {
 .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
 </style>
 <link rel="stylesheet" href="themes/cherry-blossom.css">
+<link rel="stylesheet" href="themes/s3kero.css">
+<script>
+// ── Dynamic Theme Loader ──
+// Load all available theme CSS files so [data-theme="..."] selectors work
+(function loadAllThemes() {
+  const themes = [
+    'claude','darkmatter','cyberpunk','mono','vercel','neo-brutalism',
+    'catppuccin','cosmic-night','midnight-bloom','northern-lights','starry-night',
+    'doom-64','violet-bloom','quantum-rose','bold-tech','elegant-luxury',
+    'amber-minimal','sage-garden','nature','solar-dusk','kodama-grove',
+    'graphite','modern-minimal','tangerine','ocean-breeze','caffeine',
+    'retro-arcade','pastel-dreams','soft-pop'
+  ];
+  const base = window.location.href.substring(0, window.location.href.lastIndexOf('/') + 1) + 'themes/';
+  themes.forEach(t => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = base + t + '.css';
+    document.head.appendChild(link);
+  });
+})();
+</script>
 </head>
 <body>
 
@@ -2138,6 +2160,36 @@ body::before {
                   <select id="themeSelect" onchange="switchTheme(this.value)">
                     <option value="default">🐀 Rat Green (Default)</option>
                     <option value="cherry-blossom">🌸 Cherry Blossom</option>
+                    <option value="s3kero">⚔️ S3Kero</option>
+                    <option value="claude">🤖 Claude</option>
+                    <option value="darkmatter">⚫ Darkmatter</option>
+                    <option value="cyberpunk">💠 Cyberpunk</option>
+                    <option value="mono">◻️ Mono</option>
+                    <option value="vercel">▲ Vercel</option>
+                    <option value="neo-brutalism">🧱 Neo Brutalism</option>
+                    <option value="catppuccin">😺 Catppuccin</option>
+                    <option value="cosmic-night">🌌 Cosmic Night</option>
+                    <option value="midnight-bloom">🌙 Midnight Bloom</option>
+                    <option value="northern-lights">🌠 Northern Lights</option>
+                    <option value="starry-night">⭐ Starry Night</option>
+                    <option value="doom-64">💀 Doom 64</option>
+                    <option value="violet-bloom">🌷 Violet Bloom</option>
+                    <option value="quantum-rose">🌹 Quantum Rose</option>
+                    <option value="bold-tech">⚡ Bold Tech</option>
+                    <option value="elegant-luxury">👑 Elegant Luxury</option>
+                    <option value="amber-minimal">🟠 Amber Minimal</option>
+                    <option value="sage-garden">🌿 Sage Garden</option>
+                    <option value="nature">🌲 Nature</option>
+                    <option value="solar-dusk">🌅 Solar Dusk</option>
+                    <option value="kodama-grove">🎋 Kodama Grove</option>
+                    <option value="graphite">⬜ Graphite</option>
+                    <option value="modern-minimal">📐 Modern Minimal</option>
+                    <option value="tangerine">🍊 Tangerine</option>
+                    <option value="ocean-breeze">🌊 Ocean Breeze</option>
+                    <option value="caffeine">☕ Caffeine</option>
+                    <option value="retro-arcade">🕹️ Retro Arcade</option>
+                    <option value="pastel-dreams">🎨 Pastel Dreams</option>
+                    <option value="soft-pop">🍬 Soft Pop</option>
                   </select>
                 </span>
               </div>

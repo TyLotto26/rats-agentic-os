@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   DOOM 64 — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="doom-64"] {
+  /* ── Primary Accent ── */
+  --accent: #e53935;
+  --accent-strong: rgba(229, 57, 53, 0.85);
+  --accent-mid: rgba(229, 57, 53, 0.5);
+  --accent-dim: rgba(229, 57, 53, 0.2);
+  --accent-faint: rgba(229, 57, 53, 0.06);
+  --accent-edge: rgba(229, 57, 53, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ffa000;
+  --yellow: #64b5f6;
+  --purple: #ffa000;
+  --blue: #e53935;
+  --orange: #a1887f;
+  --green: #689f38;
+
+  /* ── Backgrounds ── */
+  --bg: #1a1a1a;
+  --bg-panel: #2a2a2a;
+  --bg-card: #2b2b2b;
+  --bg-elevated: #2c2c2c;
+
+  /* ── Text ── */
+  --text-primary: rgba(224, 224, 224, 0.9);
+  --text-secondary: rgba(224, 224, 224, 0.6);
+  --text-faint: rgba(224, 224, 224, 0.25);
+  --text-white: #e0e0e0;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(229, 57, 53, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #2a2a2a;
+  --lane-in-progress: rgba(229, 57, 53, 0.08);
+  --lane-completed: rgba(104, 159, 56, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0px;
+}

@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   SOFT POP — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="soft-pop"] {
+  /* ── Primary Accent ── */
+  --accent: #818cf8;
+  --accent-strong: rgba(129, 140, 248, 0.85);
+  --accent-mid: rgba(129, 140, 248, 0.5);
+  --accent-dim: rgba(129, 140, 248, 0.2);
+  --accent-faint: rgba(129, 140, 248, 0.06);
+  --accent-edge: rgba(129, 140, 248, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #f87171;
+  --yellow: #fcd34d;
+  --purple: #f472b6;
+  --blue: #818cf8;
+  --orange: #4ade80;
+  --green: #2dd4bf;
+
+  /* ── Backgrounds ── */
+  --bg: #000000;
+  --bg-panel: #1a212b;
+  --bg-card: #1a212c;
+  --bg-elevated: #1b222d;
+
+  /* ── Text ── */
+  --text-primary: rgba(255, 255, 255, 0.9);
+  --text-secondary: rgba(255, 255, 255, 0.6);
+  --text-faint: rgba(255, 255, 255, 0.25);
+  --text-white: #ffffff;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(129, 140, 248, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #1a212b;
+  --lane-in-progress: rgba(129, 140, 248, 0.08);
+  --lane-completed: rgba(45, 212, 191, 0.08);
+
+  /* ── Radius ── */
+  --radius: 1rem;
+}

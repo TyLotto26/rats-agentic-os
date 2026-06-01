@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   MOCHA MOUSSE — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="mocha-mousse"] {
+  /* ── Primary Accent ── */
+  --accent: #C39E88;
+  --accent-strong: rgba(195, 158, 136, 0.85);
+  --accent-mid: rgba(195, 158, 136, 0.5);
+  --accent-dim: rgba(195, 158, 136, 0.2);
+  --accent-faint: rgba(195, 158, 136, 0.06);
+  --accent-edge: rgba(195, 158, 136, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #E57373;
+  --yellow: #A37764;
+  --purple: #8A655A;
+  --blue: #C39E88;
+  --orange: #A28777;
+  --green: #BAAB92;
+
+  /* ── Backgrounds ── */
+  --bg: #2d2521;
+  --bg-panel: #3c332e;
+  --bg-card: #3d342f;
+  --bg-elevated: #3f3630;
+
+  /* ── Text ── */
+  --text-primary: rgba(241, 240, 229, 0.9);
+  --text-secondary: rgba(241, 240, 229, 0.6);
+  --text-faint: rgba(241, 240, 229, 0.25);
+  --text-white: #F1F0E5;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(195, 158, 136, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #3c332e;
+  --lane-in-progress: rgba(195, 158, 136, 0.08);
+  --lane-completed: rgba(186, 171, 146, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

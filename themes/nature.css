@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   NATURE — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="nature"] {
+  /* ── Primary Accent ── */
+  --accent: #4caf50;
+  --accent-strong: rgba(76, 175, 80, 0.85);
+  --accent-mid: rgba(76, 175, 80, 0.5);
+  --accent-dim: rgba(76, 175, 80, 0.2);
+  --accent-faint: rgba(76, 175, 80, 0.06);
+  --accent-edge: rgba(76, 175, 80, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #c62828;
+  --yellow: #4caf50;
+  --purple: #43a047;
+  --blue: #81c784;
+  --orange: #388e3c;
+  --green: #66bb6a;
+
+  /* ── Backgrounds ── */
+  --bg: #1c2a1f;
+  --bg-panel: #2d3a2e;
+  --bg-card: #2e3b2f;
+  --bg-elevated: #2f3d30;
+
+  /* ── Text ── */
+  --text-primary: rgba(240, 235, 229, 0.9);
+  --text-secondary: rgba(240, 235, 229, 0.6);
+  --text-faint: rgba(240, 235, 229, 0.25);
+  --text-white: #f0ebe5;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(76, 175, 80, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #2d3a2e;
+  --lane-in-progress: rgba(76, 175, 80, 0.08);
+  --lane-completed: rgba(102, 187, 106, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

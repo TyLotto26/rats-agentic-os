@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   AMBER MINIMAL — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="amber-minimal"] {
+  /* ── Primary Accent ── */
+  --accent: #f59e0b;
+  --accent-strong: rgba(245, 158, 11, 0.85);
+  --accent-mid: rgba(245, 158, 11, 0.5);
+  --accent-dim: rgba(245, 158, 11, 0.2);
+  --accent-faint: rgba(245, 158, 11, 0.06);
+  --accent-edge: rgba(245, 158, 11, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ef4444;
+  --yellow: #92400e;
+  --purple: #b45309;
+  --blue: #fbbf24;
+  --orange: #92400e;
+  --green: #d97706;
+
+  /* ── Backgrounds ── */
+  --bg: #171717;
+  --bg-panel: #262626;
+  --bg-card: #272727;
+  --bg-elevated: #282828;
+
+  /* ── Text ── */
+  --text-primary: rgba(229, 229, 229, 0.9);
+  --text-secondary: rgba(229, 229, 229, 0.6);
+  --text-faint: rgba(229, 229, 229, 0.25);
+  --text-white: #e5e5e5;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(245, 158, 11, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #262626;
+  --lane-in-progress: rgba(245, 158, 11, 0.08);
+  --lane-completed: rgba(217, 119, 6, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

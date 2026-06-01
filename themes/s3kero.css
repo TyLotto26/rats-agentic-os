@@ -1,0 +1,55 @@
+/* ═══════════════════════════════════════════
+   S3KERO — Sekiro-inspired Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Palette inspired by Sekiro: Shadows Die Twice:
+   - Deep void blacks as the base
+   - Crimson/vermilion (#CC2936) as the primary accent
+   - Gold/amber (#C9A84C) as the secondary accent  
+   - Bone-white for text on dark
+   - Blood-red undertones throughout
+   ═══════════════════════════════════════════ */
+
+[data-theme="s3kero"] {
+  /* ── Primary Accent: Crimson/Vermilion ── */
+  --accent: #CC2936;
+  --accent-strong: rgba(204, 41, 54, 0.85);
+  --accent-mid: rgba(204, 41, 54, 0.50);
+  --accent-dim: rgba(204, 41, 54, 0.20);
+  --accent-faint: rgba(204, 41, 54, 0.06);
+  --accent-edge: rgba(204, 41, 54, 0.12);
+
+  /* ── Secondary: Amber/Gold ── */
+  --accent-secondary: #C9A84C;
+  --accent-secondary-strong: rgba(201, 168, 76, 0.85);
+  --accent-secondary-dim: rgba(201, 168, 76, 0.20);
+  --accent-secondary-edge: rgba(201, 168, 76, 0.10);
+
+  /* ── Semantic Colors ── */
+  --red: #CC2936;
+  --yellow: #C9A84C;
+  --purple: #7C3AED;
+  --blue: #6B7DB3;
+  --orange: #C97D2E;
+  --green: #4A7C59;
+
+  /* ── Backgrounds: Deep Void ── */
+  --bg: #0A0808;
+  --bg-panel: #0F0C0C;
+  --bg-card: #171212;
+  --bg-elevated: #201A1A;
+
+  /* ── Text: Bone-white on dark ── */
+  --text-primary: rgba(245, 235, 230, 0.90);
+  --text-secondary: rgba(210, 195, 185, 0.60);
+  --text-faint: rgba(180, 165, 155, 0.25);
+  --text-white: #F0E8E4;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(204, 41, 54, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #171212;
+  --lane-in-progress: rgba(204, 41, 54, 0.08);
+  --lane-completed: rgba(74, 124, 89, 0.08);
+}

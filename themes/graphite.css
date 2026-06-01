@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   GRAPHITE — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="graphite"] {
+  /* ── Primary Accent ── */
+  --accent: #a0a0a0;
+  --accent-strong: rgba(160, 160, 160, 0.85);
+  --accent-mid: rgba(160, 160, 160, 0.5);
+  --accent-dim: rgba(160, 160, 160, 0.2);
+  --accent-faint: rgba(160, 160, 160, 0.06);
+  --accent-edge: rgba(160, 160, 160, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #e06666;
+  --yellow: #707070;
+  --purple: #585858;
+  --blue: #a0a0a0;
+  --orange: #404040;
+  --green: #7e9ca0;
+
+  /* ── Backgrounds ── */
+  --bg: #1a1a1a;
+  --bg-panel: #202020;
+  --bg-card: #202020;
+  --bg-elevated: #212121;
+
+  /* ── Text ── */
+  --text-primary: rgba(217, 217, 217, 0.9);
+  --text-secondary: rgba(217, 217, 217, 0.6);
+  --text-faint: rgba(217, 217, 217, 0.25);
+  --text-white: #d9d9d9;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(160, 160, 160, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #202020;
+  --lane-in-progress: rgba(160, 160, 160, 0.08);
+  --lane-completed: rgba(126, 156, 160, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

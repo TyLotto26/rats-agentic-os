@@ -89,6 +89,8 @@ def api_agents():
 
 # ── API: Pipeline Health (LIVE from pipeline-state.json) ──
 @app.route("/api/pipeline")
+@app.route("/api/pipeline/state")
+@app.route("/api/pipeline-state")
 def api_pipeline():
     """Pipeline stage health from live pipeline-state.json."""
     state = read_json(PIPELINE_STATE)
@@ -130,6 +132,7 @@ def api_pipeline():
 
 # ── API: OpenRouter Live Cost ──
 @app.route("/api/openrouter")
+@app.route("/api/openrouter/balance")
 def api_openrouter():
     """Live OpenRouter balance and usage from the API."""
     try:

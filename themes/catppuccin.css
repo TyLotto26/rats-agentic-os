@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   CATPPUCCIN — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="catppuccin"] {
+  /* ── Primary Accent ── */
+  --accent: #cba6f7;
+  --accent-strong: rgba(203, 166, 247, 0.85);
+  --accent-mid: rgba(203, 166, 247, 0.5);
+  --accent-dim: rgba(203, 166, 247, 0.2);
+  --accent-faint: rgba(203, 166, 247, 0.06);
+  --accent-edge: rgba(203, 166, 247, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #f38ba8;
+  --yellow: #a6e3a1;
+  --purple: #fab387;
+  --blue: #cba6f7;
+  --orange: #f5e0dc;
+  --green: #89dceb;
+
+  /* ── Backgrounds ── */
+  --bg: #181825;
+  --bg-panel: #1e1e2e;
+  --bg-card: #1e1e2f;
+  --bg-elevated: #1f1f30;
+
+  /* ── Text ── */
+  --text-primary: rgba(205, 214, 244, 0.9);
+  --text-secondary: rgba(205, 214, 244, 0.6);
+  --text-faint: rgba(205, 214, 244, 0.25);
+  --text-white: #cdd6f4;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(203, 166, 247, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #1e1e2e;
+  --lane-in-progress: rgba(203, 166, 247, 0.08);
+  --lane-completed: rgba(137, 220, 235, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

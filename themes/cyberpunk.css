@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   CYBERPUNK — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="cyberpunk"] {
+  /* ── Primary Accent ── */
+  --accent: #ff00c8;
+  --accent-strong: rgba(255, 0, 200, 0.85);
+  --accent-mid: rgba(255, 0, 200, 0.5);
+  --accent-dim: rgba(255, 0, 200, 0.2);
+  --accent-faint: rgba(255, 0, 200, 0.06);
+  --accent-edge: rgba(255, 0, 200, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ff3d00;
+  --yellow: #00e5ff;
+  --purple: #00ffcc;
+  --blue: #ff00c8;
+  --orange: #ffe600;
+  --green: #9000ff;
+
+  /* ── Backgrounds ── */
+  --bg: #0c0c1d;
+  --bg-panel: #1e1e3f;
+  --bg-card: #1e1e40;
+  --bg-elevated: #1f1f42;
+
+  /* ── Text ── */
+  --text-primary: rgba(236, 239, 244, 0.9);
+  --text-secondary: rgba(236, 239, 244, 0.6);
+  --text-faint: rgba(236, 239, 244, 0.25);
+  --text-white: #eceff4;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(255, 0, 200, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #1e1e3f;
+  --lane-in-progress: rgba(255, 0, 200, 0.08);
+  --lane-completed: rgba(144, 0, 255, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

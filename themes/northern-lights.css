@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   NORTHERN LIGHTS — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="northern-lights"] {
+  /* ── Primary Accent ── */
+  --accent: #34a85a;
+  --accent-strong: rgba(52, 168, 90, 0.85);
+  --accent-mid: rgba(52, 168, 90, 0.5);
+  --accent-dim: rgba(52, 168, 90, 0.2);
+  --accent-faint: rgba(52, 168, 90, 0.06);
+  --accent-edge: rgba(52, 168, 90, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ef4444;
+  --yellow: #6495ed;
+  --purple: #66d9ef;
+  --blue: #34a85a;
+  --orange: #1a9641;
+  --green: #4682b4;
+
+  /* ── Backgrounds ── */
+  --bg: #1a1d23;
+  --bg-panel: #2f3436;
+  --bg-card: #303537;
+  --bg-elevated: #313739;
+
+  /* ── Text ── */
+  --text-primary: rgba(229, 229, 229, 0.9);
+  --text-secondary: rgba(229, 229, 229, 0.6);
+  --text-faint: rgba(229, 229, 229, 0.25);
+  --text-white: #e5e5e5;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(52, 168, 90, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #2f3436;
+  --lane-in-progress: rgba(52, 168, 90, 0.08);
+  --lane-completed: rgba(70, 130, 180, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   DARKMATTER — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="darkmatter"] {
+  /* ── Primary Accent ── */
+  --accent: #e78a53;
+  --accent-strong: rgba(231, 138, 83, 0.85);
+  --accent-mid: rgba(231, 138, 83, 0.5);
+  --accent-dim: rgba(231, 138, 83, 0.2);
+  --accent-faint: rgba(231, 138, 83, 0.06);
+  --accent-edge: rgba(231, 138, 83, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #5f8787;
+  --yellow: #fbcb97;
+  --purple: #888888;
+  --blue: #5f8787;
+  --orange: #999999;
+  --green: #e78a53;
+
+  /* ── Backgrounds ── */
+  --bg: #121113;
+  --bg-panel: #121212;
+  --bg-card: #121212;
+  --bg-elevated: #131313;
+
+  /* ── Text ── */
+  --text-primary: rgba(193, 193, 193, 0.9);
+  --text-secondary: rgba(193, 193, 193, 0.6);
+  --text-faint: rgba(193, 193, 193, 0.25);
+  --text-white: #c1c1c1;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(231, 138, 83, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #121212;
+  --lane-in-progress: rgba(231, 138, 83, 0.08);
+  --lane-completed: rgba(231, 138, 83, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

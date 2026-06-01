@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   PERPETUITY — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="perpetuity"] {
+  /* ── Primary Accent ── */
+  --accent: #4de8e8;
+  --accent-strong: rgba(77, 232, 232, 0.85);
+  --accent-mid: rgba(77, 232, 232, 0.5);
+  --accent-dim: rgba(77, 232, 232, 0.2);
+  --accent-faint: rgba(77, 232, 232, 0.06);
+  --accent-edge: rgba(77, 232, 232, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #e83c3c;
+  --yellow: #2d8a8a;
+  --purple: #19595e;
+  --blue: #4de8e8;
+  --orange: #0e383c;
+  --green: #36a5a5;
+
+  /* ── Backgrounds ── */
+  --bg: #0a1a20;
+  --bg-panel: #0c2025;
+  --bg-card: #0c2026;
+  --bg-elevated: #0c2127;
+
+  /* ── Text ── */
+  --text-primary: rgba(77, 232, 232, 0.9);
+  --text-secondary: rgba(77, 232, 232, 0.6);
+  --text-faint: rgba(77, 232, 232, 0.25);
+  --text-white: #4de8e8;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(77, 232, 232, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #0c2025;
+  --lane-in-progress: rgba(77, 232, 232, 0.08);
+  --lane-completed: rgba(54, 165, 165, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.125rem;
+}

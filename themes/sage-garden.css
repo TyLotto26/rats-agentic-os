@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   SAGE GARDEN — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="sage-garden"] {
+  /* ── Primary Accent ── */
+  --accent: #7c9082;
+  --accent-strong: rgba(124, 144, 130, 0.85);
+  --accent-mid: rgba(124, 144, 130, 0.5);
+  --accent-dim: rgba(124, 144, 130, 0.2);
+  --accent-faint: rgba(124, 144, 130, 0.06);
+  --accent-edge: rgba(124, 144, 130, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #ef4444;
+  --yellow: #8b9d83;
+  --purple: #6b7280;
+  --blue: #7c9082;
+  --orange: #5a6b5e;
+  --green: #a0aa88;
+
+  /* ── Backgrounds ── */
+  --bg: #0a0a0a;
+  --bg-panel: #121212;
+  --bg-card: #121212;
+  --bg-elevated: #131313;
+
+  /* ── Text ── */
+  --text-primary: rgba(245, 245, 245, 0.9);
+  --text-secondary: rgba(245, 245, 245, 0.6);
+  --text-faint: rgba(245, 245, 245, 0.25);
+  --text-white: #f5f5f5;
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(124, 144, 130, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: #121212;
+  --lane-in-progress: rgba(124, 144, 130, 0.08);
+  --lane-completed: rgba(160, 170, 136, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}

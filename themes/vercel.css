@@ -1,0 +1,47 @@
+/* ═══════════════════════════════════════════
+   VERCEL — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Generated from tweakcn shadcn/ui preset
+   ═══════════════════════════════════════════ */
+
+[data-theme="vercel"] {
+  /* ── Primary Accent ── */
+  --accent: oklch(1.00 0 0);
+  --accent-strong: rgba(128, 128, 128, 0.85);
+  --accent-mid: rgba(128, 128, 128, 0.5);
+  --accent-dim: rgba(128, 128, 128, 0.2);
+  --accent-faint: rgba(128, 128, 128, 0.06);
+  --accent-edge: rgba(128, 128, 128, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: oklch(0.69 0.20 23.91);
+  --yellow: oklch(0.56 0 0);
+  --purple: oklch(0.44 0 0);
+  --blue: oklch(0.81 0.17 75.35);
+  --orange: oklch(0.92 0 0);
+  --green: oklch(0.58 0.21 260.84);
+
+  /* ── Backgrounds ── */
+  --bg: oklch(0 0 0);
+  --bg-panel: oklch(0.14 0 0);
+  --bg-card: #oklch(0.14 0 0);
+  --bg-elevated: #oklch(0.14 0 0);
+
+  /* ── Text ── */
+  --text-primary: rgba(128, 128, 128, 0.9);
+  --text-secondary: rgba(128, 128, 128, 0.6);
+  --text-faint: rgba(128, 128, 128, 0.25);
+  --text-white: oklch(1.00 0 0);
+
+  /* ── Ambient glow ── */
+  --accent-glow: rgba(128, 128, 128, 0.03);
+
+  /* ── Kanban lane tints ── */
+  --lane-pending: oklch(0.14 0 0);
+  --lane-in-progress: rgba(128, 128, 128, 0.08);
+  --lane-completed: rgba(128, 128, 128, 0.08);
+
+  /* ── Radius ── */
+  --radius: 0.5rem;
+}
