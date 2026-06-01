@@ -26,6 +26,11 @@ HOME = Path.home()
 STATIC_DIR = HOME / "rats-agentic-os"
 DASHBOARD_HTML = STATIC_DIR / "agentic-os.html"
 
+@app.route("/themes/<path:filename>")
+def serve_theme(filename):
+    theme_dir = STATIC_DIR / "themes"
+    return send_from_directory(str(theme_dir), filename)
+
 # ── Data sources ──
 PIPELINE_STATE   = HOME / "pipeline-state.json"
 TRADING_STATE    = HOME / "trading-state.json"

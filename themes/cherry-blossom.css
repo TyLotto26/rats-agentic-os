@@ -1,0 +1,42 @@
+/* ═══════════════════════════════════════════
+   CHERRY BLOSSOM (Sakura) — Dark Theme
+   Rats on Wallstreet — Agentic OS
+   
+   Palette inspired by cherry blossoms at night:
+   - Deep crimson-black void as the base
+   - Sakura pink (#FF8A9E) as the primary accent
+   - Gold/amber (#E8B84B) as warm secondary
+   - Soft pink hues for text on dark
+   ═══════════════════════════════════════════ */
+
+[data-theme="cherry-blossom"] {
+  /* ── Primary Accent: Sakura Pink ── */
+  --accent: #FF8A9E;
+  --accent-strong: rgba(255, 138, 158, 0.85);
+  --accent-mid: rgba(255, 138, 158, 0.50);
+  --accent-dim: rgba(255, 138, 158, 0.20);
+  --accent-faint: rgba(255, 138, 158, 0.06);
+  --accent-edge: rgba(255, 138, 158, 0.12);
+
+  /* ── Semantic Colors ── */
+  --red: #E8435A;
+  --yellow: #E8B84B;
+  --purple: #C084FC;
+  --blue: #67B8E8;
+  --orange: #E8954B;
+
+  /* ── Backgrounds: Deep crimson-black void ── */
+  --bg: #0D0A0A;
+  --bg-panel: #120E0E;
+  --bg-card: #181313;
+  --bg-elevated: #1F1919;
+
+  /* ── Text: Warm pink tones on dark ── */
+  --text-primary: rgba(255, 230, 235, 0.90);
+  --text-secondary: rgba(255, 200, 210, 0.60);
+  --text-faint: rgba(255, 180, 195, 0.25);
+  --text-white: #FDF0F2;
+
+  /* ── Ambient glow overlay ── */
+  --accent-glow: rgba(255, 138, 158, 0.04);
+}

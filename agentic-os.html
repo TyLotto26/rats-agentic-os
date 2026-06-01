@@ -1148,6 +1148,7 @@ body::before {
 .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
 .grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 20px; }
 </style>
+<link rel="stylesheet" href="themes/cherry-blossom.css">
 </head>
 <body>
 
@@ -2128,6 +2129,20 @@ body::before {
               </div>
             </div>
           </div>
+          <div class="card">
+            <div class="card-title">Display Theme</div>
+            <div class="setting-group">
+              <div class="setting-row">
+                <span class="set-label">Dashboard Theme</span>
+                <span class="set-value">
+                  <select id="themeSelect" onchange="switchTheme(this.value)">
+                    <option value="default">🐀 Rat Green (Default)</option>
+                    <option value="cherry-blossom">🌸 Cherry Blossom</option>
+                  </select>
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -2219,6 +2234,22 @@ function escapeHtml(str) {
   d.textContent = str;
   return d.innerHTML;
 }
+
+// ── Theme Switcher ──
+function switchTheme(name) {
+  document.documentElement.setAttribute('data-theme', name);
+  try { localStorage.setItem('rOS-theme', name); } catch {}
+}
+(function initTheme() {
+  try {
+    const saved = localStorage.getItem('rOS-theme');
+    if (saved && saved !== 'default') {
+      document.documentElement.setAttribute('data-theme', saved);
+      const sel = document.getElementById('themeSelect');
+      if (sel) sel.value = saved;
+    }
+  } catch {}
+})();
 
 function formatTime(iso) {
   if (!iso) return '—';
